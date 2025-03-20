@@ -16,6 +16,18 @@ Route::get("/saludar/{nombre?}",function ($nombre=""){
 Route::get('login',[PuertaController::class, 'login']);
 Route::post('validar',[PuertaController::class, 'validar'])->name('puerta.validar');
 
+Route::get('/register', [PuertaController::class, 'showRegister'])->name('register');
+Route::post('/register', [PuertaController::class, 'registrar'])->name('registrar');
+
+Route::get('/dashboard', function() {
+    $usuario = Auth::user(); // Obtener el usuario autenticado
+
+    if ($usuario) {
+        return "Bienvenido, {$usuario->nombre} ({$usuario->nombre_usuario})";
+    } else {
+        return "No estás autenticado.";
+    }
+})->name('dashboard')->middleware('auth');
 
 //Route Model Binding
 //CRUD
