@@ -12,7 +12,7 @@
    <label for='nombre_usuario'>Nombre de usuario</label>
    <input type='text' name='nombre_usuario' id='nombre_usuario'><br>
    <label for='clave'>Contraseña</label>
-   <input type='text' name='clave' id='clave'><br>
+   <input type='password' name='clave' id='clave'><br>
    <input type="submit" value="Validar">
  </form>
  

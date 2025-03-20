@@ -6,5 +6,5 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Usuario extends Authenticatable
 {
-    protected $fillable = ['nombre','nombre_usuario', 'clave'];
+    protected $fillable = ['nombre','nombre_usuario', 'clave', 'tipo'];
 }

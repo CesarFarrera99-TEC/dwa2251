@@ -16,6 +16,7 @@ class PuertaController extends Controller
         $request->validate([
             'nombre' => 'required|string|max:255',
             'nombre_usuario' => 'required|string|max:255|unique:usuarios',
+            'tipo' => 'required',
             'clave' => 'required|string|min:6|confirmed', // confirmed sirve para confirmar que la clave fue puesta 2 veces seguidas en el formulario
         ]);
 
@@ -23,6 +24,7 @@ class PuertaController extends Controller
         $usuario = Usuario::create([
             'nombre' => $request->nombre,
             'nombre_usuario' => $request->nombre_usuario,
+            'tipo' => $request->tipo,
             'clave' => Hash::make($request->clave), // Encriptar la clave
         ]);
 

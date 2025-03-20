@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('nombre_usuario');
             $table->string('clave');
+            $table->enum('tipo',['empleado','cliente','administrador'])-> default('empleado');
             $table->timestamps();
         });
     }

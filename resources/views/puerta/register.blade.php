@@ -37,7 +37,12 @@
         <label for="clave_confirmation">Confirmar Clave:</label>
         <input type="password" name="clave_confirmation" required>
         <br>
-
+        <label for="tipo_usuario">Tipo de usuario:</label>
+        <select name="tipo" id="tipo" required>
+            <option value='cliente'> Cliente</option>
+            <option value='empleado'>Empleado</option>
+        </select>
+        <br>
         <button type="submit">Registrar</button>
     </form>
 

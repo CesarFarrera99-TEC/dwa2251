@@ -23,7 +23,8 @@ Route::get('/dashboard', function() {
     $usuario = Auth::user(); // Obtener el usuario autenticado
 
     if ($usuario) {
-        return "Bienvenido, {$usuario->nombre} ({$usuario->nombre_usuario})";
+        return view('puerta.bienvenido');
+        //return "Bienvenido, {$usuario->nombre} ({$usuario->nombre_usuario})";
     } else {
         return "No estás autenticado.";
     }
